@@ -64,8 +64,6 @@ cwd = os.getcwd()
 image_folder = "site/y8.com"
 image_path = os.path.join(cwd, image_folder)
 
-
-
 if not os.path.exists(image_path):
     os.makedirs(image_path)
 
