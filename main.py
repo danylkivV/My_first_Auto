@@ -72,10 +72,9 @@ try:
             name = driver.title
             path = os.path.join(image_path, name + date_string + ".png")
             driver.save_screenshot(path)
-            desc = driver.find_element_by_xpath("//div[@class= 'ltr description']").text
+            desc = driver.find_element_by_css_selector('.description p').text
             print(desc)
-            file_name = (name + date_string + ".txt")
-            completeName = os.path.join(image_folder, file_name)
+            completeName = os.path.join(image_path, name + date_string + ".txt")
             f = open(completeName, "a")
             f.write(desc)
             f.close()
